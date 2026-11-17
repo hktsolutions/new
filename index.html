@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HKT Solutions — Driving Technology, Delivering Value</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-800 antialiased min-h-screen flex flex-col">
+
+  <!-- TOP HEADER: TRẮNG + LOGO + HOTLINE -->
+  <div class="bg-white border-b border-gray-100 py-3 px-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <!-- LOGO HKT -->
+      <a href="javascript:void(0)" onclick="navigateTo('/')" class="inline-block">
+        <img src="/logo.png" alt="HKT Solutions" class="h-10 sm:h-12 w-auto object-contain">
+      </a>
+
+      <!-- HOTLINE & ĐỊA ĐIỂM -->
+      <div class="hidden sm:flex items-center space-x-6 text-xs text-gray-600">
+        <div>📍 HKT Smart Tower, Lô 5 Trần Quý Hai, Tây Nha Trang</div>
+        <div>📞 Hotline: <a href="tel:0868552526" class="font-bold text-[#0066cc] text-sm hover:underline">0868 552 526</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MENU BAR: MÀU XANH DƯƠNG (#0066cc), CHỮ TRẮNG, KHÔNG RỚT HÀNG -->
+  <header class="bg-[#0066cc] text-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-12">
+        
+        <!-- DESKTOP NAV: CHỮ TRẮNG, SIZE NHỎ, WHITESPACE-NOWRAP -->
+        <nav class="hidden lg:flex items-center space-x-0.5 text-[13px] font-medium tracking-wide">
+          
+          <a href="javascript:void(0)" onclick="navigateTo('/')" class="whitespace-nowrap px-3 py-3.5 hover:bg-[#0052a3] transition">
+            Trang chủ
+          </a>
+
+          <a href="javascript:void(0)" onclick="navigateTo('/gioi-thieu')" class="whitespace-nowrap px-3 py-3.5 hover:bg-[#0052a3] transition">
+            Giới thiệu
+          </a>
+
+          <!-- DROPDOWN 1: HẠ TẦNG CNTT (CLICK VÀO TÊN LÀ VÀO TRANG CHA) -->
+          <div class="relative group">
+            <a href="javascript:void(0)" onclick="navigateTo('/giai-phap-cntt')" class="whitespace-nowrap px-3 py-3.5 hover:bg-[#0052a3] transition flex items-center gap-1 cursor-pointer">
+              <span>Hạ tầng CNTT</span>
+              <span class="text-[10px] opacity-80">▼</span>
+            </a>
+            <div class="absolute left-0 top-full pt-1 w-64 opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 z-50">
+              <div class="bg-white text-gray-800 rounded-lg shadow-xl border border-gray-200 py-1 text-xs font-normal">
+                <a href="javascript:void(0)" onclick="navigateTo('/giai-phap-cntt/mang-wifi')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Mạng & WiFi chuyên dụng</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/giai-phap-cntt/camera-giam-sat')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Camera an ninh giám sát AI</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/giai-phap-cntt/truyen-hinh-iptv')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Truyền hình IPTV</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/giai-phap-cntt/tong-dai')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Tổng đài VoIP</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/giai-phap-cntt/am-thanh')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Hệ thống âm thanh</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/giai-phap-cntt/bai-xe-thong-minh')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Bãi xe thông minh Barrier</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/giai-phap-cntt/access-control')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Access Control & Thang máy</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/giai-phap-cntt/phong-hop-thong-minh')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Phòng họp thông minh</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/giai-phap-cntt/lop-hoc-thong-minh')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Lớp học thông minh</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- DROPDOWN 2: PHẦN MỀM (CLICK VÀO TÊN LÀ VÀO TRANG CHA) -->
+          <div class="relative group">
+            <a href="javascript:void(0)" onclick="navigateTo('/phan-mem')" class="whitespace-nowrap px-3 py-3.5 hover:bg-[#0052a3] transition flex items-center gap-1 cursor-pointer">
+              <span>Phần mềm</span>
+              <span class="text-[10px] opacity-80">▼</span>
+            </a>
+            <div class="absolute left-0 top-full pt-1 w-60 opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 z-50">
+              <div class="bg-white text-gray-800 rounded-lg shadow-xl border border-gray-200 py-1 text-xs font-normal">
+                <a href="javascript:void(0)" onclick="navigateTo('/phan-mem/provista-pms')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Provista PMS</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/phan-mem/provista-crm')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Provista CRM</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/phan-mem/provista-iptv')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Provista IPTV</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/phan-mem/provista-qr-code')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Provista QR Code</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/phan-mem/tro-ly-ai')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Trợ lý AI</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/phan-mem/quan-ly-truong-hoc')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Quản lý trường học</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- DROPDOWN 3: IT OUTSOURCING (CLICK VÀO TÊN LÀ VÀO TRANG CHA) -->
+          <div class="relative group">
+            <a href="javascript:void(0)" onclick="navigateTo('/it-outsourcing')" class="whitespace-nowrap px-3 py-3.5 hover:bg-[#0052a3] transition flex items-center gap-1 cursor-pointer">
+              <span>IT Outsourcing</span>
+              <span class="text-[10px] opacity-80">▼</span>
+            </a>
+            <div class="absolute left-0 top-full pt-1 w-60 opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 z-50">
+              <div class="bg-white text-gray-800 rounded-lg shadow-xl border border-gray-200 py-1 text-xs font-normal">
+                <a href="javascript:void(0)" onclick="navigateTo('/it-outsourcing/khach-san-resort')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Cho Khách sạn & Resort</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/it-outsourcing/toa-nha-truong-hoc')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Cho Tòa nhà & Trường học</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- DROPDOWN 4: CÔNG NGHỆ (CLICK VÀO TÊN LÀ VÀO TRANG CHA) -->
+          <div class="relative group">
+            <a href="javascript:void(0)" onclick="navigateTo('/cong-nghe')" class="whitespace-nowrap px-3 py-3.5 hover:bg-[#0052a3] transition flex items-center gap-1 cursor-pointer">
+              <span>Công nghệ</span>
+              <span class="text-[10px] opacity-80">▼</span>
+            </a>
+            <div class="absolute left-0 top-full pt-1 w-60 opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 z-50">
+              <div class="bg-white text-gray-800 rounded-lg shadow-xl border border-gray-200 py-1 text-xs font-normal">
+                <a href="javascript:void(0)" onclick="navigateTo('/cong-nghe/robot-phuc-vu')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Robot phục vụ Keenon</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/cong-nghe/thiet-bi-dich')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Thiết bị dịch hội nghị</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- DROPDOWN 5: HKT SMART TOWER (CLICK VÀO TÊN LÀ VÀO TRANG CHA) -->
+          <div class="relative group">
+            <a href="javascript:void(0)" onclick="navigateTo('/hkt-smart-tower')" class="whitespace-nowrap px-3 py-3.5 hover:bg-[#0052a3] transition flex items-center gap-1 cursor-pointer">
+              <span>HKT Smart Tower</span>
+              <span class="text-[10px] opacity-80">▼</span>
+            </a>
+            <div class="absolute left-0 top-full pt-1 w-64 opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 z-50">
+              <div class="bg-white text-gray-800 rounded-lg shadow-xl border border-gray-200 py-1 text-xs font-normal">
+                <a href="javascript:void(0)" onclick="navigateTo('/hkt-smart-tower/cho-thue-phong-hop')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Thuê Phòng họp VIP T4</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/hkt-smart-tower/cho-thue-sanh-workshop')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Thuê Sảnh sự kiện T1</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/hkt-smart-tower/cho-thue-man-led')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Màn hình LED Cầu Ngọc Hồi</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- DROPDOWN 6: ĐÀO TẠO (CLICK VÀO TÊN LÀ VÀO TRANG CHA) -->
+          <div class="relative group">
+            <a href="javascript:void(0)" onclick="navigateTo('/dao-tao-cntt')" class="whitespace-nowrap px-3 py-3.5 hover:bg-[#0052a3] transition flex items-center gap-1 cursor-pointer">
+              <span>Đào tạo</span>
+              <span class="text-[10px] opacity-80">▼</span>
+            </a>
+            <div class="absolute left-0 top-full pt-1 w-60 opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 z-50">
+              <div class="bg-white text-gray-800 rounded-lg shadow-xl border border-gray-200 py-1 text-xs font-normal">
+                <a href="javascript:void(0)" onclick="navigateTo('/dao-tao-cntt/quan-tri-mang')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Quản trị mạng doanh nghiệp</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/dao-tao-cntt/an-toan-thong-tin')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">An toàn thông tin & Bảo mật</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- DROPDOWN 7: TIN TỨC (CLICK VÀO TÊN LÀ VÀO TRANG CHA) -->
+          <div class="relative group">
+            <a href="javascript:void(0)" onclick="navigateTo('/tin-tuc')" class="whitespace-nowrap px-3 py-3.5 hover:bg-[#0052a3] transition flex items-center gap-1 cursor-pointer">
+              <span>Tin tức</span>
+              <span class="text-[10px] opacity-80">▼</span>
+            </a>
+            <div class="absolute right-0 top-full pt-1 w-60 opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 z-50">
+              <div class="bg-white text-gray-800 rounded-lg shadow-xl border border-gray-200 py-1 text-xs font-normal">
+                <a href="javascript:void(0)" onclick="navigateTo('/tin-tuc/du-an')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Dự án triển khai</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/tin-tuc/hoat-dong')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Tin hoạt động</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/tin-tuc/tuyen-dung')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Tuyển dụng</a>
+              </div>
+            </div>
+          </div>
+
+        </nav>
+
+        <!-- CTA BUTTON: NÚT TRẮNG CHỮ XANH -->
+        <div class="hidden lg:flex items-center">
+          <button onclick="navigateTo('/tu-van-trien-khai')" class="whitespace-nowrap px-4 py-2 bg-white text-[#0066cc] hover:bg-blue-50 text-xs font-bold rounded shadow-sm transition">
+            Tư vấn & Triển khai
+          </button>
+        </div>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button onclick="toggleMobileMenu()" class="lg:hidden text-white font-bold p-2">
+          ☰ MENU
+        </button>
+
+      </div>
+    </div>
+
+    <!-- MOBILE DRAWER -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-[#0052a3] text-white p-4 space-y-2 text-xs font-medium border-t border-blue-400">
+      <a href="javascript:void(0)" onclick="navigateTo('/'); toggleMobileMenu();" class="block py-1.5">Trang chủ</a>
+      <a href="javascript:void(0)" onclick="navigateTo('/gioi-thieu'); toggleMobileMenu();" class="block py-1.5">Giới thiệu</a>
+      <a href="javascript:void(0)" onclick="navigateTo('/giai-phap-cntt'); toggleMobileMenu();" class="block py-1.5">Hạ tầng CNTT</a>
+      <a href="javascript:void(0)" onclick="navigateTo('/phan-mem'); toggleMobileMenu();" class="block py-1.5">Phần mềm</a>
+      <a href="javascript:void(0)" onclick="navigateTo('/it-outsourcing'); toggleMobileMenu();" class="block py-1.5">IT Outsourcing</a>
+      <a href="javascript:void(0)" onclick="navigateTo('/cong-nghe'); toggleMobileMenu();" class="block py-1.5">Công nghệ</a>
+      <a href="javascript:void(0)" onclick="navigateTo('/hkt-smart-tower'); toggleMobileMenu();" class="block py-1.5">HKT Smart Tower</a>
+      <a href="javascript:void(0)" onclick="navigateTo('/dao-tao-cntt'); toggleMobileMenu();" class="block py-1.5">Đào tạo</a>
+      <a href="javascript:void(0)" onclick="navigateTo('/tin-tuc'); toggleMobileMenu();" class="block py-1.5">Tin tức</a>
+      <button onclick="navigateTo('/tu-van-trien-khai'); toggleMobileMenu();" class="w-full mt-2 py-2 bg-white text-[#0066cc] font-bold rounded">
+        Tư vấn & Triển khai
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN DYNAMIC CONTENT CONTAINER (NỀN TRẮNG) -->
+  <main id="appContent" class="flex-grow bg-white">
+    <!-- NỘI DUNG SẼ RENDER THEO TỪNG TRANG -->
+  </main>
+
+  <!-- FOOTER TINH GIẢN -->
+  <footer class="bg-gray-100 border-t border-gray-200 py-6 text-center text-xs text-gray-500">
+    <div class="max-w-7xl mx-auto px-4">
+      © 2026 CÔNG TY TNHH TƯ VẤN GIẢI PHÁP CÔNG NGHỆ HKT · "Driving Technology – Delivering Value"
+    </div>
+  </footer>
+
+  <!-- SCRIPT ROUTING & DATA -->
+  <script>
+    const pages = {
+      // 1. TRANG CHỦ & GIỚI THIỆU
+      '/': {
+        title: 'Trang chủ — Sơ đồ Cấu trúc Website HKT Solutions',
+        desc: 'Tổng quan toàn bộ hệ thống menu, danh mục và cấu trúc đường dẫn (slug) của website.',
+        slug: '/'
+      },
+      '/gioi-thieu': {
+        title: 'Giới thiệu về HKT Solutions',
+        desc: 'Hồ sơ năng lực, lịch sử hình thành từ 2018, đội ngũ nhân sự và đối tác công nghệ chiến lược.',
+        slug: '/gioi-thieu'
+      },
+
+      // 2. HẠ TẦNG CNTT
+      '/giai-phap-cntt': {
+        title: 'Hạ tầng CNTT & Viễn thông',
+        desc: 'Tổng quan dịch vụ tư vấn, thiết kế và thi công hệ thống điện nhẹ ICT trọn gói.',
+        slug: '/giai-phap-cntt'
+      },
+      '/giai-phap-cntt/mang-wifi': {
+        title: 'Mạng & WiFi chuyên dụng',
+        desc: 'Giải pháp hạ tầng mạng LAN/WAN và WiFi chịu tải cao cho khách sạn, resort, tòa nhà, trường học.',
+        slug: '/giai-phap-cntt/mang-wifi'
+      },
+      '/giai-phap-cntt/camera-giam-sat': {
+        title: 'Camera an ninh giám sát AI',
+        desc: 'Hệ thống camera an ninh thông minh nhận diện khuôn mặt, đọc biển số xe và cảnh báo đột nhập.',
+        slug: '/giai-phap-cntt/camera-giam-sat'
+      },
+      '/giai-phap-cntt/truyen-hinh-iptv': {
+        title: 'Truyền hình IPTV',
+        desc: 'Hạ tầng truyền hình số tương tác cho phòng lưu trú khách sạn, resort.',
+        slug: '/giai-phap-cntt/truyen-hinh-iptv'
+      },
+      '/giai-phap-cntt/tong-dai': {
+        title: 'Tổng đài VoIP',
+        desc: 'Hệ thống tổng đài điện thoại nội bộ cho khách sạn, tòa nhà và doanh nghiệp.',
+        slug: '/giai-phap-cntt/tong-dai'
+      },
+      '/giai-phap-cntt/am-thanh': {
+        title: 'Hệ thống âm thanh',
+        desc: 'Giải pháp âm thanh cho hội trường, phòng họp, nhà hàng và không gian công cộng.',
+        slug: '/giai-phap-cntt/am-thanh'
+      },
+      '/giai-phap-cntt/bai-xe-thong-minh': {
+        title: 'Bãi xe thông minh Barrier',
+        desc: 'Hệ thống quản lý bãi đỗ xe tự động bằng thẻ từ kết hợp camera nhận diện biển số xe.',
+        slug: '/giai-phap-cntt/bai-xe-thong-minh'
+      },
+      '/giai-phap-cntt/access-control': {
+        title: 'Access Control & Thang máy',
+        desc: 'Kiểm soát cửa ra vào bằng vân tay/khuôn mặt và giải pháp phân tầng thẻ từ thang máy tòa nhà.',
+        slug: '/giai-phap-cntt/access-control'
+      },
+      '/giai-phap-cntt/phong-hop-thong-minh': {
+        title: 'Phòng họp thông minh',
+        desc: 'Hệ thống hội nghị trực tuyến, camera auto-tracking theo người nói và micro không dây hội trường.',
+        slug: '/giai-phap-cntt/phong-hop-thong-minh'
+      },
+      '/giai-phap-cntt/lop-hoc-thong-minh': {
+        title: 'Lớp học thông minh',
+        desc: 'Giải pháp chuyển đổi số trường học với bảng tương tác cảm ứng, âm thanh giảng dạy và camera ghi hình.',
+        slug: '/giai-phap-cntt/lop-hoc-thong-minh'
+      },
+
+      // 3. PHẦN MỀM
+      '/phan-mem': {
+        title: 'Hệ sinh thái Phần mềm Quản trị',
+        desc: 'Các giải pháp phần mềm chuyên ngành số hóa quy trình vận hành ngành lưu trú và giáo dục.',
+        slug: '/phan-mem'
+      },
+      '/phan-mem/provista-pms': {
+        title: 'Provista PMS',
+        desc: 'Phần mềm quản lý khách sạn và resort chuyên sâu.',
+        slug: '/phan-mem/provista-pms'
+      },
+      '/phan-mem/provista-crm': {
+        title: 'Provista CRM',
+        desc: 'Phần mềm quản lý và chăm sóc khách hàng lưu trú.',
+        slug: '/phan-mem/provista-crm'
+      },
+      '/phan-mem/provista-iptv': {
+        title: 'Provista IPTV',
+        desc: 'Ứng dụng truyền hình tương tác trên TV phòng khách sạn.',
+        slug: '/phan-mem/provista-iptv'
+      },
+      '/phan-mem/provista-qr-code': {
+        title: 'Provista QR Code',
+        desc: 'Giải pháp khách tự quét mã QR tại phòng để tra cứu dịch vụ, gọi món và yêu cầu dọn phòng.',
+        slug: '/phan-mem/provista-qr-code'
+      },
+      '/phan-mem/tro-ly-ai': {
+        title: 'Trợ lý AI',
+        desc: 'Giải pháp trợ lý ảo AI hỗ trợ tự động hóa tư vấn và chăm sóc khách hàng.',
+        slug: '/phan-mem/tro-ly-ai'
+      },
+      '/phan-mem/quan-ly-truong-hoc': {
+        title: 'Quản lý trường học',
+        desc: 'Phần mềm số hóa quản lý thông tin học sinh, điểm danh và học phí.',
+        slug: '/phan-mem/quan-ly-truong-hoc'
+      },
+
+      // 4. IT OUTSOURCING
+      '/it-outsourcing': {
+        title: 'Dịch vụ IT Outsourcing (IT Thuê ngoài)',
+        desc: 'Đội ngũ kỹ sư CNTT vận hành, bảo trì định kỳ và hỗ trợ xử lý sự cố kỹ thuật.',
+        slug: '/it-outsourcing'
+      },
+      '/it-outsourcing/khach-san-resort': {
+        title: 'Cho Khách sạn & Resort',
+        desc: 'Dịch vụ trực ca kỹ thuật hỗ trợ vận hành hệ thống lưu trú.',
+        slug: '/it-outsourcing/khach-san-resort'
+      },
+      '/it-outsourcing/toa-nha-truong-hoc': {
+        title: 'Cho Tòa nhà & Trường học',
+        desc: 'Dịch vụ bảo trì hệ thống máy chủ, máy tính văn phòng và trường học.',
+        slug: '/it-outsourcing/toa-nha-truong-hoc'
+      },
+
+      // 5. CÔNG NGHỆ
+      '/cong-nghe': {
+        title: 'Robot Phục vụ & Thiết bị Công nghệ',
+        desc: 'Cung cấp thiết bị công nghệ tự động hóa và nâng cao trải nghiệm phục vụ khách hàng.',
+        slug: '/cong-nghe'
+      },
+      '/cong-nghe/robot-phuc-vu': {
+        title: 'Robot phục vụ Keenon',
+        desc: 'Đại lý phân phối Robot Keenon tại Khánh Hòa: robot bưng món nhà hàng và robot giao hàng khách sạn.',
+        slug: '/cong-nghe/robot-phuc-vu'
+      },
+      '/cong-nghe/thiet-bi-dich': {
+        title: 'Thiết bị dịch hội nghị',
+        desc: 'Tai nghe phiên dịch không dây và thiết bị dịch trực tiếp cho hội thảo, sự kiện quốc tế.',
+        slug: '/cong-nghe/thiet-bi-dich'
+      },
+
+      // 6. HKT SMART TOWER
+      '/hkt-smart-tower': {
+        title: 'HKT Smart Tower — Tòa nhà Công nghệ',
+        desc: 'Tòa nhà công nghệ đầu tiên tại Nha Trang: showroom trải nghiệm giải pháp và dịch vụ cho thuê không gian.',
+        slug: '/hkt-smart-tower'
+      },
+      '/hkt-smart-tower/cho-thue-phong-hop': {
+        title: 'Thuê Phòng họp VIP T4',
+        desc: 'Phòng họp thượng đỉnh 70 khách, đầu tư 2 tỷ thiết bị, mic nâng hạ, camera auto-tracking, họp online quốc tế.',
+        slug: '/hkt-smart-tower/cho-thue-phong-hop'
+      },
+      '/hkt-smart-tower/cho-thue-sanh-workshop': {
+        title: 'Thuê Sảnh sự kiện T1',
+        desc: 'Sảnh sự kiện hơn 60 khách trang bị màn hình LED 2.5P cỡ lớn và hệ thống âm thanh tiêu chuẩn.',
+        slug: '/hkt-smart-tower/cho-thue-sanh-workshop'
+      },
+      '/hkt-smart-tower/cho-thue-man-led': {
+        title: 'Màn hình LED Cầu Ngọc Hồi',
+        desc: 'Màn hình LED ngoài trời 36m² trên nóc tòa nhà HKT Smart Tower, tầm nhìn ngang tầm mắt người đi đường.',
+        slug: '/hkt-smart-tower/cho-thue-man-led'
+      },
+
+      // 7. ĐÀO TẠO
+      '/dao-tao-cntt': {
+        title: 'Trung tâm Đào tạo CNTT Thực chiến',
+        desc: 'Đào tạo kỹ sư mạng và an ninh thông tin, học viên thực hành 100% trên thiết bị thật.',
+        slug: '/dao-tao-cntt'
+      },
+      '/dao-tao-cntt/quan-tri-mang': {
+        title: 'Quản trị mạng doanh nghiệp',
+        desc: 'Đào tạo thiết kế mạng LAN/WAN, cấu hình Router, Switch và xử lý sự cố hạ tầng thực tế.',
+        slug: '/dao-tao-cntt/quan-tri-mang'
+      },
+      '/dao-tao-cntt/an-toan-thong-tin': {
+        title: 'An toàn thông tin & Bảo mật',
+        desc: 'Kỹ năng phòng chống tấn công mạng, thiết lập Firewall và quy trình ứng cứu sự cố bảo mật.',
+        slug: '/dao-tao-cntt/an-toan-thong-tin'
+      },
+
+      // 8. TIN TỨC
+      '/tin-tuc': {
+        title: 'Tin tức & Hoạt động HKT Solutions',
+        desc: 'Tổng hợp các chuyên mục tin tức, sự kiện nội bộ và hồ sơ dự án công trình thực tế.',
+        slug: '/tin-tuc'
+      },
+      '/tin-tuc/du-an': {
+        title: 'Dự án triển khai',
+        desc: 'Cập nhật các dự án và công trình thực tế HKT Solutions đã làm.',
+        slug: '/tin-tuc/du-an'
+      },
+      '/tin-tuc/hoat-dong': {
+        title: 'Tin hoạt động',
+        desc: 'Cập nhật tin tức hoạt động, sự kiện khai trương và đời sống văn hóa doanh nghiệp HKT.',
+        slug: '/tin-tuc/hoat-dong'
+      },
+      '/tin-tuc/tuyen-dung': {
+        title: 'Tuyển dụng',
+        desc: 'Thông tin cơ hội nghề nghiệp các vị trí kỹ sư CNTT và chuyên viên kinh doanh giải pháp.',
+        slug: '/tin-tuc/tuyen-dung'
+      },
+
+      // 9. TRANG CHUYỂN ĐỔI
+      '/tu-van-trien-khai': {
+        title: 'Tư vấn & Triển khai',
+        desc: 'Tiếp nhận yêu cầu tư vấn kỹ thuật, khảo sát hiện trạng công trình miễn phí và lập dự toán.',
+        slug: '/tu-van-trien-khai'
+      }
+    };
+
+    // Hàm chuyển trang
+    function navigateTo(path) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      const page = pages[path] || pages['/'];
+      document.title = `${page.title} — HKT Solutions`;
+
+      // NẾU LÀ TRANG CHỦ: HIỂN THỊ SƠ ĐỒ CẤU TRÚC WEBSITE
+      if (path === '/') {
+        document.getElementById('appContent').innerHTML = `
+          <div class="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto space-y-10">
+            
+            <div class="border-b border-gray-200 pb-5">
+              <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">
+                Sơ đồ Cấu trúc Website HKT Solutions (Sitemap Architecture)
+              </h1>
+              <p class="text-sm text-gray-600 mt-2">
+                Bản phác thảo tổng thể toàn bộ hệ sinh thái menu và cấu trúc đường dẫn URL slug (chuẩn SEO độ sâu ≤ 2 cấp).
+              </p>
+            </div>
+
+            <!-- GRID TOÀN BỘ CÂY CẤU TRÚC -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+              
+              <!-- NHÁNH 1: HẠ TẦNG CNTT -->
+              <div class="p-5 rounded-xl border border-gray-200 bg-slate-50/60 space-y-3">
+                <div class="font-bold text-sm text-[#0066cc] cursor-pointer hover:underline" onclick="navigateTo('/giai-phap-cntt')">
+                  1. Hạ tầng CNTT (hktsolutions.vn/giai-phap-cntt)
+                </div>
+                <ul class="space-y-2 text-gray-700 pl-3 border-l-2 border-blue-300">
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/giai-phap-cntt/mang-wifi')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Mạng & WiFi chuyên dụng</span>: hktsolutions.vn/giai-phap-cntt/mang-wifi</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/giai-phap-cntt/camera-giam-sat')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Camera an ninh giám sát AI</span>: hktsolutions.vn/giai-phap-cntt/camera-giam-sat</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/giai-phap-cntt/truyen-hinh-iptv')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Truyền hình IPTV</span>: hktsolutions.vn/giai-phap-cntt/truyen-hinh-iptv</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/giai-phap-cntt/tong-dai')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Tổng đài VoIP</span>: hktsolutions.vn/giai-phap-cntt/tong-dai</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/giai-phap-cntt/am-thanh')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Hệ thống âm thanh</span>: hktsolutions.vn/giai-phap-cntt/am-thanh</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/giai-phap-cntt/bai-xe-thong-minh')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Bãi xe thông minh Barrier</span>: hktsolutions.vn/giai-phap-cntt/bai-xe-thong-minh</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/giai-phap-cntt/access-control')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Access Control & Thang máy</span>: hktsolutions.vn/giai-phap-cntt/access-control</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/giai-phap-cntt/phong-hop-thong-minh')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Phòng họp thông minh</span>: hktsolutions.vn/giai-phap-cntt/phong-hop-thong-minh</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/giai-phap-cntt/lop-hoc-thong-minh')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Lớp học thông minh</span>: hktsolutions.vn/giai-phap-cntt/lop-hoc-thong-minh</a></li>
+                </ul>
+              </div>
+
+              <!-- NHÁNH 2: PHẦN MỀM -->
+              <div class="p-5 rounded-xl border border-gray-200 bg-slate-50/60 space-y-3">
+                <div class="font-bold text-sm text-[#0066cc] cursor-pointer hover:underline" onclick="navigateTo('/phan-mem')">
+                  2. Phần mềm (hktsolutions.vn/phan-mem)
+                </div>
+                <ul class="space-y-2 text-gray-700 pl-3 border-l-2 border-blue-300">
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/phan-mem/provista-pms')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Provista PMS</span>: hktsolutions.vn/phan-mem/provista-pms</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/phan-mem/provista-crm')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Provista CRM</span>: hktsolutions.vn/phan-mem/provista-crm</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/phan-mem/provista-iptv')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Provista IPTV</span>: hktsolutions.vn/phan-mem/provista-iptv</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/phan-mem/provista-qr-code')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Provista QR Code</span>: hktsolutions.vn/phan-mem/provista-qr-code</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/phan-mem/tro-ly-ai')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Trợ lý AI</span>: hktsolutions.vn/phan-mem/tro-ly-ai</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/phan-mem/quan-ly-truong-hoc')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Quản lý trường học</span>: hktsolutions.vn/phan-mem/quan-ly-truong-hoc</a></li>
+                </ul>
+              </div>
+
+              <!-- NHÁNH 3: IT OUTSOURCING -->
+              <div class="p-5 rounded-xl border border-gray-200 bg-slate-50/60 space-y-3">
+                <div class="font-bold text-sm text-[#0066cc] cursor-pointer hover:underline" onclick="navigateTo('/it-outsourcing')">
+                  3. IT Outsourcing (hktsolutions.vn/it-outsourcing)
+                </div>
+                <ul class="space-y-2 text-gray-700 pl-3 border-l-2 border-blue-300">
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/it-outsourcing/khach-san-resort')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Cho Khách sạn & Resort</span>: hktsolutions.vn/it-outsourcing/khach-san-resort</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/it-outsourcing/toa-nha-truong-hoc')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Cho Tòa nhà & Trường học</span>: hktsolutions.vn/it-outsourcing/toa-nha-truong-hoc</a></li>
+                </ul>
+              </div>
+
+              <!-- NHÁNH 4: CÔNG NGHỆ -->
+              <div class="p-5 rounded-xl border border-gray-200 bg-slate-50/60 space-y-3">
+                <div class="font-bold text-sm text-[#0066cc] cursor-pointer hover:underline" onclick="navigateTo('/cong-nghe')">
+                  4. Công nghệ (hktsolutions.vn/cong-nghe)
+                </div>
+                <ul class="space-y-2 text-gray-700 pl-3 border-l-2 border-blue-300">
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/cong-nghe/robot-phuc-vu')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Robot phục vụ Keenon</span>: hktsolutions.vn/cong-nghe/robot-phuc-vu</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/cong-nghe/thiet-bi-dich')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Thiết bị dịch hội nghị</span>: hktsolutions.vn/cong-nghe/thiet-bi-dich</a></li>
+                </ul>
+              </div>
+
+              <!-- NHÁNH 5: HKT SMART TOWER -->
+              <div class="p-5 rounded-xl border border-gray-200 bg-slate-50/60 space-y-3">
+                <div class="font-bold text-sm text-[#0066cc] cursor-pointer hover:underline" onclick="navigateTo('/hkt-smart-tower')">
+                  5. HKT Smart Tower (hktsolutions.vn/hkt-smart-tower)
+                </div>
+                <ul class="space-y-2 text-gray-700 pl-3 border-l-2 border-blue-300">
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/hkt-smart-tower/cho-thue-phong-hop')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Thuê Phòng họp VIP T4</span>: hktsolutions.vn/hkt-smart-tower/cho-thue-phong-hop</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/hkt-smart-tower/cho-thue-sanh-workshop')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Thuê Sảnh sự kiện T1</span>: hktsolutions.vn/hkt-smart-tower/cho-thue-sanh-workshop</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/hkt-smart-tower/cho-thue-man-led')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Màn hình LED Cầu Ngọc Hồi</span>: hktsolutions.vn/hkt-smart-tower/cho-thue-man-led</a></li>
+                </ul>
+              </div>
+
+              <!-- NHÁNH 6: ĐÀO TẠO -->
+              <div class="p-5 rounded-xl border border-gray-200 bg-slate-50/60 space-y-3">
+                <div class="font-bold text-sm text-[#0066cc] cursor-pointer hover:underline" onclick="navigateTo('/dao-tao-cntt')">
+                  6. Đào tạo (hktsolutions.vn/dao-tao-cntt)
+                </div>
+                <ul class="space-y-2 text-gray-700 pl-3 border-l-2 border-blue-300">
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/dao-tao-cntt/quan-tri-mang')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Quản trị mạng</span>: hktsolutions.vn/dao-tao-cntt/quan-tri-mang</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/dao-tao-cntt/an-toan-thong-tin')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">An toàn thông tin</span>: hktsolutions.vn/dao-tao-cntt/an-toan-thong-tin</a></li>
+                </ul>
+              </div>
+
+              <!-- NHÁNH 7: TIN TỨC -->
+              <div class="p-5 rounded-xl border border-gray-200 bg-slate-50/60 space-y-3">
+                <div class="font-bold text-sm text-[#0066cc] cursor-pointer hover:underline" onclick="navigateTo('/tin-tuc')">
+                  7. Tin tức (hktsolutions.vn/tin-tuc)
+                </div>
+                <ul class="space-y-2 text-gray-700 pl-3 border-l-2 border-blue-300">
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/tin-tuc/du-an')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Dự án triển khai</span>: hktsolutions.vn/tin-tuc/du-an</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/tin-tuc/hoat-dong')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Tin hoạt động</span>: hktsolutions.vn/tin-tuc/hoat-dong</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/tin-tuc/tuyen-dung')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Tuyển dụng</span>: hktsolutions.vn/tin-tuc/tuyen-dung</a></li>
+                </ul>
+              </div>
+
+              <!-- NHÁNH 8: CHUYỂN ĐỔI -->
+              <div class="p-5 rounded-xl border border-gray-200 bg-slate-50/60 space-y-3">
+                <div class="font-bold text-sm text-[#0066cc] cursor-pointer hover:underline" onclick="navigateTo('/tu-van-trien-khai')">
+                  8. Chuyển đổi (hktsolutions.vn/tu-van-trien-khai)
+                </div>
+                <ul class="space-y-2 text-gray-700 pl-3 border-l-2 border-blue-300">
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/tu-van-trien-khai')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Tư vấn & Triển khai</span>: hktsolutions.vn/tu-van-trien-khai</a></li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+        `;
+      } else {
+        // CÁC TRANG CON: CHỈ HIỂN THỊ ĐÚNG 3 MỤC DUY NHẤT
+        document.getElementById('appContent').innerHTML = `
+          <div class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto space-y-4">
+            <!-- 1. Tiêu đề lớn -->
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
+              ${page.title}
+            </h1>
+
+            <!-- 2. Mô tả ngắn -->
+            <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+              ${page.desc}
+            </p>
+
+            <!-- 3. Link mẫu URL -->
+            <div class="text-sm font-mono text-[#0066cc] font-semibold pt-2">
+              URL: hktsolutions.vn${page.slug}
+            </div>
+          </div>
+        `;
+      }
+
+      window.history.pushState({ path }, page.title, '#' + path);
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    window.addEventListener('popstate', () => {
+      const hashPath = window.location.hash.replace('#', '') || '/';
+      navigateTo(hashPath);
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const initialPath = window.location.hash.replace('#', '') || '/';
+      navigateTo(initialPath);
+    });
+  </script>
+</body>
+</html>
