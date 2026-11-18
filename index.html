@@ -89,14 +89,14 @@
 
           <!-- DROPDOWN 3: IT OUTSOURCING (CLICK VÀO TÊN LÀ VÀO TRANG CHA) -->
           <div class="relative group">
-            <a href="javascript:void(0)" onclick="navigateTo('/it-outsourcing')" class="whitespace-nowrap px-3 py-3.5 hover:bg-[#0052a3] transition flex items-center gap-1 cursor-pointer">
+            <a href="javascript:void(0)" onclick="navigateTo('/dich-vu-it')" class="whitespace-nowrap px-3 py-3.5 hover:bg-[#0052a3] transition flex items-center gap-1 cursor-pointer">
               <span>IT Outsourcing</span>
               <span class="text-[10px] opacity-80">▼</span>
             </a>
             <div class="absolute left-0 top-full pt-1 w-60 opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 z-50">
               <div class="bg-white text-gray-800 rounded-lg shadow-xl border border-gray-200 py-1 text-xs font-normal">
-                <a href="javascript:void(0)" onclick="navigateTo('/it-outsourcing/khach-san-resort')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Cho Khách sạn & Resort</a>
-                <a href="javascript:void(0)" onclick="navigateTo('/it-outsourcing/toa-nha-truong-hoc')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Cho Tòa nhà & Trường học</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/dich-vu-it/khach-san-resort')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Cho Khách sạn & Resort</a>
+                <a href="javascript:void(0)" onclick="navigateTo('/dich-vu-it/toa-nha-truong-hoc')" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#0066cc]">Cho Tòa nhà & Trường học</a>
               </div>
             </div>
           </div>
@@ -182,7 +182,7 @@
       <a href="javascript:void(0)" onclick="navigateTo('/gioi-thieu'); toggleMobileMenu();" class="block py-1.5">Giới thiệu</a>
       <a href="javascript:void(0)" onclick="navigateTo('/giai-phap-cntt'); toggleMobileMenu();" class="block py-1.5">Hạ tầng CNTT</a>
       <a href="javascript:void(0)" onclick="navigateTo('/phan-mem'); toggleMobileMenu();" class="block py-1.5">Phần mềm</a>
-      <a href="javascript:void(0)" onclick="navigateTo('/it-outsourcing'); toggleMobileMenu();" class="block py-1.5">IT Outsourcing</a>
+      <a href="javascript:void(0)" onclick="navigateTo('/dich-vu-it'); toggleMobileMenu();" class="block py-1.5">IT Outsourcing</a>
       <a href="javascript:void(0)" onclick="navigateTo('/cong-nghe'); toggleMobileMenu();" class="block py-1.5">Công nghệ</a>
       <a href="javascript:void(0)" onclick="navigateTo('/hkt-smart-tower'); toggleMobileMenu();" class="block py-1.5">HKT Smart Tower</a>
       <a href="javascript:void(0)" onclick="navigateTo('/dao-tao-cntt'); toggleMobileMenu();" class="block py-1.5">Đào tạo</a>
@@ -310,20 +310,20 @@
       },
 
       // 4. IT OUTSOURCING
-      '/it-outsourcing': {
+      '/dich-vu-it': {
         title: 'Dịch vụ IT Outsourcing (IT Thuê ngoài)',
         desc: 'Đội ngũ kỹ sư CNTT vận hành, bảo trì định kỳ và hỗ trợ xử lý sự cố kỹ thuật.',
-        slug: '/it-outsourcing'
+        slug: '/dich-vu-it'
       },
-      '/it-outsourcing/khach-san-resort': {
+      '/dich-vu-it/khach-san-resort': {
         title: 'Cho Khách sạn & Resort',
         desc: 'Dịch vụ trực ca kỹ thuật hỗ trợ vận hành hệ thống lưu trú.',
-        slug: '/it-outsourcing/khach-san-resort'
+        slug: '/dich-vu-it/khach-san-resort'
       },
-      '/it-outsourcing/toa-nha-truong-hoc': {
+      '/dich-vu-it/toa-nha-truong-hoc': {
         title: 'Cho Tòa nhà & Trường học',
         desc: 'Dịch vụ bảo trì hệ thống máy chủ, máy tính văn phòng và trường học.',
-        slug: '/it-outsourcing/toa-nha-truong-hoc'
+        slug: '/dich-vu-it/toa-nha-truong-hoc'
       },
 
       // 5. CÔNG NGHỆ
@@ -471,12 +471,12 @@
 
               <!-- NHÁNH 3: IT OUTSOURCING -->
               <div class="p-5 rounded-xl border border-gray-200 bg-slate-50/60 space-y-3">
-                <div class="font-bold text-sm text-[#0066cc] cursor-pointer hover:underline" onclick="navigateTo('/it-outsourcing')">
-                  3. IT Outsourcing (hktsolutions.vn/it-outsourcing)
+                <div class="font-bold text-sm text-[#0066cc] cursor-pointer hover:underline" onclick="navigateTo('/dich-vu-it')">
+                  3. IT Outsourcing (hktsolutions.vn/dich-vu-it)
                 </div>
                 <ul class="space-y-2 text-gray-700 pl-3 border-l-2 border-blue-300">
-                  <li><a href="javascript:void(0)" onclick="navigateTo('/it-outsourcing/khach-san-resort')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Cho Khách sạn & Resort</span>: hktsolutions.vn/it-outsourcing/khach-san-resort</a></li>
-                  <li><a href="javascript:void(0)" onclick="navigateTo('/it-outsourcing/toa-nha-truong-hoc')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Cho Tòa nhà & Trường học</span>: hktsolutions.vn/it-outsourcing/toa-nha-truong-hoc</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/dich-vu-it/khach-san-resort')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Cho Khách sạn & Resort</span>: hktsolutions.vn/dich-vu-it/khach-san-resort</a></li>
+                  <li><a href="javascript:void(0)" onclick="navigateTo('/dich-vu-it/toa-nha-truong-hoc')" class="hover:text-[#0066cc] hover:underline"><span class="font-bold text-[#0052a3]">Cho Tòa nhà & Trường học</span>: hktsolutions.vn/dich-vu-it/toa-nha-truong-hoc</a></li>
                 </ul>
               </div>
 
